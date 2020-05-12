@@ -17,15 +17,14 @@ pipeline {
     }
 }
 
+// node('master') {
+//     sh("your shell script")   
+// }
 
-node('master') {
-    sh("your shell script")   
-}
-
-node {
-	stage ("SCM checkout"){
-		git "https://github.com/v-campbell/Selenium_Test"
-		}
+// node {
+// 	stage ("SCM checkout"){
+// 		git "https://github.com/v-campbell/Selenium_Test"
+// 		}
 	// stage ("Build"){
     // 	dir("comtest") {
 	//    sh "mvn clean install"
@@ -34,4 +33,4 @@ node {
 	//    sh "java -jar com.test-1.0-SNAPSHOT.jar"
     //    }
 	// 	}
-}
+// }
