@@ -1,17 +1,12 @@
+#!/usr/bin/env groovy
+
 browserstack(credentialsId: "<2b2a07ed-8715-4956-b1b4-1c5815b1500d>") {
     // code for executing test cases
 }
 
-// pipeline {
-//     agent none
-//     environment {
-//         VERSION = sh(returnStdout: true, script: 'git describe --tags')
-//     }
-// }
-
 node {
 	stage ("SCM checkout"){
-		git "https://gitlab.com/mbabilo/experitest"
+		git "https://github.com/v-campbell/Selenium_Test"
 		}
 	stage ("Build"){
     	dir("comtest") {
@@ -22,19 +17,3 @@ node {
        }
 		}
 }
-
-    // pipeline {
-    //     agent any
-    //     stages {
-    //         stage('Example') {
-    //             steps {
-    //                 echo 'Hello World'
-    //             }
-    //         }
-    //     }
-    //     post { 
-    //         always { 
-    //             echo 'I will always say Hello again!'
-    //         }
-    //     }
-    // }
