@@ -1,7 +1,7 @@
 {
   "name": "test1",
   "version": "1.0.0",
-  "description": "Selenium test1",
+  "description": "Selenium test",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +12,7 @@
     "chai": "^3.5.0",
     "cross-env": "^1.0.8",
     "mocha": "^2.5.3",
-    "selenium-webdriver": "^4.0.0-alpha.7"
+    "selenium-webdriver": "^4.0.0-alpha.7",    
+    "wdio-browserstack-reporter": "~1.0.0"
   }
 }
