@@ -21,7 +21,7 @@ driver.get('http://www.google.com/');
 // enter 'wiki' into search
 driver.findElement(By.name("q")).sendKeys("wiki");
 // click search button
-driver.findElement(By.name("btnK")).click();
+driver.findElements(By.name("btnK")).click();
 // wait 1 second for title to show up
 driver.wait(check_title, 1000);
 
