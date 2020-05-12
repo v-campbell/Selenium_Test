@@ -5,6 +5,10 @@ browserstack('2b2a07ed-8715-4956-b1b4-1c5815b1500d') {
     // some block
 }
 
+node('master') {
+    sh("your shell script")   
+}
+
 // pipeline {
 //     agent any
 //     stages {
