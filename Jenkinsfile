@@ -26,12 +26,12 @@ node {
 	stage ("SCM checkout"){
 		git "https://github.com/v-campbell/Selenium_Test"
 		}
-	stage ("Build"){
-    	dir("comtest") {
-	   sh "mvn clean install"
-       }
-       	dir("comtest/target") {
-	   sh "java -jar com.test-1.0-SNAPSHOT.jar"
-       }
-		}
+	// stage ("Build"){
+    // 	dir("comtest") {
+	//    sh "mvn clean install"
+    //    }
+    //    	dir("comtest/target") {
+	//    sh "java -jar com.test-1.0-SNAPSHOT.jar"
+    //    }
+	// 	}
 }
