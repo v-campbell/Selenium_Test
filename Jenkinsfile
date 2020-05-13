@@ -4,32 +4,32 @@
 
 junit testDataPublishers: [[$class: 'AutomateTestDataPublisher']], testResults: 'target/surefire-reports/TEST-*.xml'
 
-pipeline {
-    agent any
-    stages {
-        stage('Build') {
-            steps {
-                sh 'make build'
-            }
-        }
-        stage('Test') {
-            steps {
-                sh 'make test'
+// pipeline {
+//     agent any
+//     stages {
+//         stage('Build') {
+//             steps {
+//                 sh 'make build'
+//             }
+//         }
+//         stage('Test') {
+//             steps {
+//                 sh 'make test'
 
-                script {
-                    def testResults = findFiles(glob: 'build/reports/**/*.xml')
-                    for(xml in testResults) {
-                        touch xml.getPath()
-                    }
-                }
-            }
-        }
-    }
+//                 script {
+//                     def testResults = findFiles(glob: 'build/reports/**/*.xml')
+//                     for(xml in testResults) {
+//                         touch xml.getPath()
+//                     }
+//                 }
+//             }
+//         }
+//     }
 
-    post {
-        always {
-            archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
-            junit 'build/reports/**/*.xml'
-        }
-    }
-}
+//     post {
+//         always {
+//             archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
+//             junit 'build/reports/**/*.xml'
+//         }
+//     }
+// }
