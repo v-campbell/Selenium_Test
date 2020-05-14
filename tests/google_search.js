@@ -1,9 +1,9 @@
 const {Builder, By, Key, util} = require("selenium-webdriver");
 
-async function example() {
+async function search() {
     let driver = await new Builder().forBrowser("chrome").build();
     await driver.get("http://google.com");
     await driver.findElement(By.name("q")).sendKeys("Selenium",Key.RETURN);
 }
 
-example();
+search();

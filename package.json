@@ -4,16 +4,22 @@
   "description": "Selenium test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run single",
+    "single": "./scripts/single_test.js",
+    "mochatest": "mocha --recursive --timeout 10000 test.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chai": "^3.5.0",
+    "chai": "^1.10.0",
+    "chai-as-promised": "^4.1.1",
+    "coffee-script": "^1.12.7",
     "cross-env": "^1.0.8",
-    "mocha": "^2.5.3",
     "selenium-webdriver": "^4.0.0-alpha.7",
     "wdio-browserstack-reporter": "~0.1.0",
     "webdriverio": "^6.1.11"
+  },
+  "devDependencies": {
+    "mocha": "^2.5.3"
   }
 }
